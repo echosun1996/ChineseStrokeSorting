@@ -1,7 +1,8 @@
 # 中文笔划排序程序
 
-![Python package](https://github.com/naivenlp/naive-stopwords/workflows/Python%20package/badge.svg)
-[![Python](https://img.shields.io/pypi/pyversions/naive-stopwords.svg?style=plastic)](https://badge.fury.io/py/naive-stopwords)
+![Python package](https://github.com/echosun1996/ChineseStrokeSorting/workflows/Python%20package/badge.svg)
+![PyPI version](https://badge.fury.io/py/chinese-stroke-sorting.svg)
+![Python](https://img.shields.io/pypi/pyversions/chinese-stroke-sorting.svg?style=plastic)
 
 ## 特点
 - 支持对名单列表进行按笔划排序
