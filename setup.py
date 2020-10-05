@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="chinese-stroke-sorting",
-    version="0.1.0",
+    version="0.1.1",
     author="echosun",
     author_email="echosun1996@126.com",
     description="Chinese Name Sort by Stroke Order",
