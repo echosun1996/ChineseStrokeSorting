@@ -1,17 +1,18 @@
-# ###############################################################
 # 最终版笔划排序程序
-
 # ###############################################################
 # 从 wait_for_sort.txt 文件中读取姓名列表，注意，每行一个人名。
 import os
 
 name_list = []
 
+
 def read_from_file(file_name):
     global name_list
     with open(file_name, 'r', encoding='UTF-8') as f:
         for line in f:
             name_list.append(line.split('\n')[0])
+
+
 # print('待排序的名单：')
 # print(name_list)
 
@@ -21,18 +22,17 @@ def read_from_file(file_name):
 # file_name = "bh.txt"  # 定义数据文件名
 chinese_char_dict = dict()
 
+
 def read_from_bh():
     global chinese_char_dict
     current_package_path = os.path.dirname(os.path.abspath(__file__))
-    with open("".join([current_package_path,'/bh.txt']), 'r', encoding='UTF-8') as f:
+    with open("".join([current_package_path, '/bh.txt']), 'r', encoding='UTF-8') as f:
         while True:
             line = f.readline()
             if not line:
                 break
             line_after_split = line.split('\t')
             chinese_char_dict[line_after_split[0]] = line_after_split[1].split('\n')[0]
-
-
 
 
 # ###############################################################
@@ -43,13 +43,12 @@ name_stroke_count_list = []  # 根据姓名与每个字的笔画数列表组成�
 
 
 def init_name_stroke_count_list():
-    global chinese_char_dict, name_stroke_count_list,name_list
+    global chinese_char_dict, name_stroke_count_list, name_list
     for name in name_list:
         name_total_strokes_list = []  # 名字的总笔画数
         for name_char in name:
             name_total_strokes_list.append(chinese_char_dict.get(name_char))
         name_stroke_count_list.append([name, name_total_strokes_list])
-
 
 
 # print('姓名与笔画数列表：')
@@ -62,7 +61,7 @@ char_num_i = 0
 
 
 def sort_by_name():
-    global char_num_i,name_stroke_count_list
+    global char_num_i, name_stroke_count_list
     for i in range(len(name_stroke_count_list)):
         for j in range(len(name_stroke_count_list) - i - 1):
             if char_num_i == 0 and int(name_stroke_count_list[j][1][char_num_i]) > int(
@@ -92,8 +91,6 @@ def find_char_num_i_change():
     return False
 
 
-
-
 # print(name_stroke_count_list)
 # ###############################################################
 # 在控制台输出排序后的结果。
@@ -102,21 +99,22 @@ name_result_list = []  # 排序后的名字
 
 # 从 name_stroke_count_list 中去除笔画数列表
 def remove_stroke_count():
-    global name_result_list,name_stroke_count_list
+    global name_result_list, name_stroke_count_list
     for name in name_stroke_count_list:
         name_result_list.append(name[0])
+
 
 # ###############################################################
 # 将排好序的人名列表存放在 result.txt 中。
 # 通过设定 split_char,可以以不同的分隔形式存放到文件中。
-def write_to_file(result_file_name,split_char):
+def write_to_file(result_file_name, split_char):
     global name_result_list
     with open(result_file_name, 'w', encoding='UTF-8') as f:
         f.write(split_char.join(str(i) for i in name_result_list))
 
 
 def sort_by_stroke(name_list_input):
-    global name_result_list,name_list
+    global name_result_list, name_list
     name_list = name_list_input
     # read_from_file()
     # name_list = ['张三', '李四', '王五']
