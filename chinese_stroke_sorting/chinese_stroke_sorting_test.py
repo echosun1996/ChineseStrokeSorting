@@ -33,8 +33,8 @@ class SortByNameTest(unittest.TestCase):
         print(result_for_human)
         self.write_sort_result_to_human_test(result_for_human)
 
-        output_path = 'result.txt'
-        write_sort_result_to_file(sort_result, output_path, split_char='\n')  # 将排序结果写入到文件
+        output_file = 'result.txt'
+        write_sort_result_to_file(sort_result, output_file, split_char='\n')  # 将排序结果写入到文件
 
 # if __name__ == "__main__":
 #     unittest.main()

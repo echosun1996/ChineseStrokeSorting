@@ -6,8 +6,8 @@ import os
 __name_list = []
 
 
-def read_name_list_from_file(file_name):
-    with open(str(file_name), 'r', encoding='UTF-8') as f:
+def read_name_list_from_file(input_file):
+    with open(str(input_file), 'r', encoding='UTF-8') as f:
         for line in f:
             __name_list.append(line.split('\n')[0])
     return __name_list
@@ -100,8 +100,8 @@ def __remove_stroke_count__():
 # ###############################################################
 # 将排好序的人名列表存放在 result.txt 中。
 # 通过设定 split_char,可以以不同的分隔形式存放到文件中。
-def write_sort_result_to_file(sort_result_list, result_file_name, split_char='\n'):
-    with open(result_file_name, 'w', encoding='UTF-8') as f:
+def write_sort_result_to_file(sort_result_list, output_file, split_char='\n'):
+    with open(str(output_file), 'w', encoding='UTF-8') as f:
         f.write(split_char.join(str(i) for i in sort_result_list))
 
 
