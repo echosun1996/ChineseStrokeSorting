@@ -13,13 +13,13 @@
 ## 安装
 
 ```bash
-pip install -i https://test.pypi.org/simple/ chinese-stroke-sorting
+pip install chinese-stroke-sorting
 ```
 
 ## 更新
 
 ```bash
-pip install -i https://test.pypi.org/simple/ --upgrade chinese-stroke-sorting
+pip install --upgrade chinese-stroke-sorting
 ```
 
 ## 使用说明
@@ -54,7 +54,7 @@ pip install -i https://test.pypi.org/simple/ --upgrade chinese-stroke-sorting
 
 ## 说明
 
-项目发布于PyPI：[单击访问](https://test.pypi.org/project/chinese-stroke-sorting/) 
+项目发布于PyPI：[单击访问](https://pypi.org/project/chinese-stroke-sorting/) 
 
 本模块尚不完善，有任何相关问题或建议，欢迎在本项目的github页面中提交issue: [单击访问](https://github.com/echosun1996/ChineseStrokeSorting)
 
