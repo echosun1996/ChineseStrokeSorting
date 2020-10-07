@@ -4,6 +4,8 @@
 import os
 
 __char_num_i = 0
+
+
 def read_name_list_from_file(input_file):
     name_list = []
     with open(str(input_file), 'r', encoding='UTF-8') as f:
@@ -68,6 +70,7 @@ def __sort__(name_stroke_count_list):
                                                                                name_stroke_count_list[j]
     return name_stroke_count_list
 
+
 # 查找 char_num_i 是否需要变动
 def __find_char_num_i_change__(name_stroke_count_list):
     global __char_num_i
@@ -83,13 +86,13 @@ def __find_char_num_i_change__(name_stroke_count_list):
 # 在控制台输出排序后的结果。
 
 
-
 # 从 name_stroke_count_list 中去除笔画数列表
 def __remove_stroke_count__(name_stroke_count_list):
     name_result_list = []  # 排序后的名字
     for name in name_stroke_count_list:
         name_result_list.append(name[0])
     return name_result_list
+
 
 # ###############################################################
 # 将排好序的人名列表存放在 result.txt 中。
