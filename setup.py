@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="chinese-stroke-sorting",
-    version="0.2.2",
+    version="0.2.3",
     author="echosun",
     author_email="echosun1996@126.com",
     description="Chinese Name Sort by Stroke Order",
@@ -13,6 +13,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/echosun1996/ChineseStrokeSorting",
     packages=setuptools.find_packages(),
+    package_data={'chinese_stroke_sorting': ['bh.txt']},
     classifiers=[
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.5",
